@@ -1,59 +1,37 @@
 package principal;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import menu.Menu;
-import validacao.ConsultarArquivo;
 
-public class Usuario {
+public class Usuario extends Menu{
     
-	private String login;
+	private String nome;
 	private String senha;
+	private String email;
 
-/*
-  * DANIEL -> VERIFICA CADASTRO DO USU¡RIO ANTES DE INSERIR NO ARQUIVO (USUARIO.TXT)
-  * */
-public void cadastrarUsuario(String nome ,String pass) {
+public String getFuncionario() {
 	
-	PrintWriter arquivo = null;  
-	login = nome;
-	senha = pass;
-
-	try {
-		
-		FileWriter arquivoUsuario = new FileWriter("src\\dados\\usuario.txt", true);
-		arquivo = new PrintWriter(arquivoUsuario);
-           
-          arquivo.println(login);
-          arquivo.println(senha);
-          
-       } catch(IOException e){
-           System.out.println("Erro ao cadastrar"+ e.getMessage());
-           
-       }catch (NullPointerException e) {
-           System.out.println("Erro! O login e senha n√£o podem estar vazios.");
-           
-       }finally {
-           arquivo.close();
-       }
-    }
-
-public String getLogin() {
-	return login;
+	return nome + senha + email;
+}
+	
+public String getNome() {
+	return nome;
 }
 
 public String getSenha() {
 	return senha;
 }
 
-public void setLogin(String login) {
-	this.login = login;
+public void setNome(String nome) {
+	this.nome = nome;
 }
 
-public void setSenha(String pass) {
-	this.senha = pass;
+public void setSenha(String senha) {
+	this.senha = senha;
+}
+public void setFuncionario(String nome, String senha, String email) {
+	this.senha = senha;
+	this.nome = nome;
+	this.email = email;
 }
 
 }

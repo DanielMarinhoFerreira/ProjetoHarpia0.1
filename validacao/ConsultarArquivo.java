@@ -1,65 +1,37 @@
 package validacao;
 
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Scanner;
-
-import principal.Usuario;
 
 public class ConsultarArquivo {
 	
-	private Scanner scan = null;
-	private String arquivo = null;
-	private String primeiroDados = null;
-	private String segundoDados = null;
+	private String primeiroDados;
+	private String segundoDados;
+	boolean gatilho = true;
 	
-/*
- * DANIEL -> CONSULTA O ARQUIVO GRAVADO COM OS USUARIOS 
- * */    
-public void  consultarUsuario() {
-		
-		String caminhoUsuario = "src\\dados\\usuario.txt"; 
-		consultaDoArquivo(caminhoUsuario);
-		
-}
-
-public void consultaDoArquivo(String arquivo) {
+public void consultarArquivo(String arquivo) {
 	
 	try {
-			
-		FileReader ler = new FileReader(arquivo);
-		scan = new Scanner (ler);
 		
-		while(scan.hasNext()) {
-		
-			/*if (primeiroDados == null || segundoDados == null) {
-				
-				System.err.checkError();
-			}else if (primeiroDados == "" || segundoDados == ""){
-				
-				System.err.checkError();
-			}else {*/
-				
-				primeiroDados = scan.next();
-				segundoDados = scan.next();
-		
-		
-	}
-	} catch (FileNotFoundException e) {
-			
-		e.printStackTrace();	
-	}
+	      FileReader arq = new FileReader(arquivo);
+	      BufferedReader lerArq = new BufferedReader(arq);
+
+	      primeiroDados = lerArq.readLine(); // lê a primeira linha
+	      
+	      if(primeiroDados != null || primeiroDados != "") {
+	    	  segundoDados = lerArq.readLine(); // lê da segunda até a última linha
+	      
+	      }else {
+	    	  
+	    	  
+	      }
+	      lerArq.close();
+
+	} catch (Exception erro) {
+		System.out.println(erro);
 }
-/*
- * DANIEL -> CONSULTA O ARQUIVO INFORMARDO NA STRING (CaminhoUsuario) 
- * */
-
-
-public void setArquivo(String arquivo) {
-		
-	this.arquivo = arquivo;
-}
-
+	}
+	
 public void setPrimeiroDados(String primeiroDados) {
 	
 	this.primeiroDados = primeiroDados;
@@ -79,11 +51,4 @@ public String getSegundoDados() {
 		
 	return segundoDados;
 }
-
-public String getArquivo() {
-		return arquivo;
-	}
-
-	
-
 }
