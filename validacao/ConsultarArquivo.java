@@ -18,7 +18,7 @@ public void consultarArquivo(String arquivo) {
 
 	      primeiroDados = lerArq.readLine(); // lê a primeira linha
 	      
-	      if(primeiroDados != null || primeiroDados != "") {
+	      if(primeiroDados != null) {//|| primeiroDados != ""
 	    	  segundoDados = lerArq.readLine(); // lê da segunda até a última linha
 	      
 	      }else {

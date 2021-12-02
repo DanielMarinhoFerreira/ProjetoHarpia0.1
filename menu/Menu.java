@@ -1,6 +1,10 @@
 package menu;
 
 import java.util.Scanner;
+
+import EntradaDados.GravarPedido;
+import EntradaDados.GravarUsuarios;
+import pedido.Item;
 import principal.Usuario;
 import validacao.ConsultarArquivo;
 
@@ -24,9 +28,10 @@ public class Menu {
 	 
 	 System.out.println("-===================== MENU ==========================-"+"\n");
 	 System.out.println("-= CADASTRAR USUARIO [1]: ============================-");
-	 System.out.println("-= REALIZAR PEDIDO   [2]: ============================-");
-	 System.out.println("-= NOTA FILCAL       [3]: ============================-");
-	 System.out.println("-= SAIR              [4]: ============================-"+"\n");
+	 System.out.println("-= PRODUTO           [2]: ============================-");
+	 System.out.println("-= REALIZAR PEDIDO   [3]: ============================-");
+	 System.out.println("-= NOTA FILCAL       [4]: ============================-");
+	 System.out.println("-= SAIR              [5]: ============================-"+"\n");
 	 System.out.println("-=====================================================-");
 	 System.out.print("Informe qual rotina gostaria de acessar: ");
    } 
@@ -47,17 +52,61 @@ public void setInforMenu(int inforMenu) {
 //============================== PAINEL DE PEDIDOS ====================================
 public void painelDePedido() {
 	
-	System.out.println("-=================== REALIZAR PEDIDO ==================-"+"\n");
-	System.out.println("-= TESTE01 ============================ [1]:");
-	System.out.println("-= TESTE02 ============================ [2]:");
-	System.out.println("-= TESTE03 ============================ [3]:");
-	System.out.println("-= SAIR =============================== [4]:");
+	boolean gatilho = true;
+	
+	Scanner scan = new Scanner(System.in);
+	GravarPedido pedido = new GravarPedido(); 
+	
+	 System.out.println("-================= PRODUTO ===========================-"+"\n");
+	 System.out.println("-= FAZER PEDIDO      [1]: ============================-");
+	 System.out.println("-= CADASTRAR PRODUTO [2]: ============================-");
+	 System.out.println("-= SAIR              [5]: ============================-"+"\n");
+	 System.out.println("-=====================================================-");
+	 
+	 System.out.print("Informe qual rotina gostaria de acessar: ");
+     int opcao = scan.nextInt();
+       
+	if(opcao == 2) {
 		
+		while (gatilho) {
+		System.out.println("-====================-");
+		System.out.print("-=    CODIGO[]:");
+		int codigo = scan.nextInt();
+		System.out.println("-====================-");
+	    System.out.print("-= DESCRIÇÃO[]:");
+	    String descricao = scan.next();
+	    System.out.println("-====================-");
+	    System.out.print("-=     VALOR[]:");
+	    double valor = scan.nextDouble();
+	    System.out.println("-====================-");
+	    System.out.print("-=      SAIR[]:");
+	    String sair = scan.next();
+	    pedido.cadastraItem(codigo,descricao,valor);
+	    
+	    if(sair.equals("s")|| sair.equals("S")) {
+	    	gatilho = false;
+	    
+	    }
+	}
+		
+	
+	}
+}
+
+//============================== PAINEL NOTA FISCAL ====================================
+
+public void painelNota () {
+	
+	System.out.printf("Cod | Produto................ Quant | Valor | Valor Total.\n");
+    System.out.printf("----------------------------------------------------------\n");
+	
+	
 }
 
 //============================== PAINEL DE CADASTRO ====================================
 public void painelDeCadastro() {
 	
+	GravarUsuarios gravar = new GravarUsuarios();
 	boolean gatilhoCadastro = true;
 	
 	while (gatilhoCadastro) {
@@ -78,7 +127,9 @@ public void painelDeCadastro() {
       }else {
       	
     	  gatilhoCadastro = false; 	
-      }      
+      }
+      
+      gravar.gravarUsuario(cadastNome, cadastSenha);
 	}	
 }
 //============================== PAINEL DE LOGIN ====================================
@@ -89,10 +140,6 @@ public void painelDeCadastro() {
  * */
 public void painelLogin() {
 	
-	//boolean gatilho =true;
-	
- // while (gatilho) // liberar esse condição quando criar a classe para ler o arquivo
-	
 	System.out.println("-===================== Login =========================-");
     System.out.print("Nome: ");
     painelLoginNome(); // METODO DE RETORNO DO NOME.
@@ -101,10 +148,6 @@ public void painelLogin() {
     painelLoginSenha(); // METODO DE RETORNO DA SENHA.
     System.out.println("-=====================================================-");
     
-  /* if(painelLoginNome().equals(consulta.getPrimeiroDados()) && painelLoginSenha().equals(consulta.getSegundoDados())) {
-    	
-    	gatilho = false;
-    }*/
 }
  public String painelLoginNome(){
 	 nome = scan.nextLine();       
