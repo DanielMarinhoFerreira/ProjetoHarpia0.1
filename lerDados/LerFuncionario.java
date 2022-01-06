@@ -8,25 +8,27 @@ import java.util.Scanner;
 import menu.PainelLogin;
 
 public class LerFuncionario {
-	
-	//private String nome = null;
-	//private String senha = null;
-	
+
+	String nomeList = null;
+	String senhaList = null;
 	private ArrayList<String> listNome = new ArrayList<String>(); 
 
 	public void lerDadosFuncionario() {
+		
+		 String nome = null;
+		 String senha = null;
 		
 		Scanner scan;
 		
 		try {
 			
-			FileReader arquivo = new FileReader("src\\Dados\\Funcionario.txt");
+			FileReader arquivo = new FileReader("src\\Dados\\Produtos.txt");
 			scan = new Scanner(arquivo);
 			
 			while (scan.hasNextLine()) {
 				
-				listNome.add(scan.next());
-				listNome.add(scan.next());
+				listNome.add(nome = scan.nextLine());
+				listNome.add(senha = scan.nextLine());
 			}
 			
 		}catch (IOException e) {
@@ -34,41 +36,24 @@ public class LerFuncionario {
 				System.out.print("Erro verificação Funcionario "+"\n" + e.getMessage());
 			}
 		}
-	
-	String nomeList = null;
-	String senhaList = null;
-	
-	public void validaLogin(String nome, String senha) {
 		
+	public void validaLogin(String nome, String senha) {
 		
 		PainelLogin log = new PainelLogin();  
 		
 		for(String i : listNome) {
-			
-			
+				
 			if(i.equals(nome)) {
 				
 				nomeList = i;
-				System.out.print(nomeList);
 				
 			}if(i.equals(senha)){
 				
 				senhaList = i;
-				System.out.print(senhaList);
-			}
+			}	
+		}	
+	}
 			
-		}
-		
-	}
-		
-	public ArrayList<String> getListNome() {
-		return listNome;
-	}
-	
-	public void setListNome(ArrayList<String> listNome) {
-		this.listNome = listNome;
-	}
-	
 	public String getNome() {
 		return nomeList;
 	}
@@ -76,4 +61,12 @@ public class LerFuncionario {
 	public String getSenha() {
 		return senhaList;
 	}	
+	
+	public ArrayList<String> getListNome() {
+		return listNome;
+	}
+	
+	public void setListNome(ArrayList<String> listNome) {
+		this.listNome = listNome;
+	}
 }

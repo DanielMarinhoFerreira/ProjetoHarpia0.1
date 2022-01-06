@@ -1,8 +1,11 @@
 package principal;
 
+import lerDados.LerProdutos;
 import menu.Menu;
+import menu.PainelCadastroProdutos;
 import menu.PainelCadastroUsuarios;
 import menu.PainelLogin;
+import produtos.Produtos;
 
 public class Principal {
 
@@ -10,23 +13,18 @@ public class Principal {
 		
 		PainelLogin  log = new PainelLogin();
 		Menu menu = new Menu();
-		PainelCadastroUsuarios cadastro = new PainelCadastroUsuarios();
+		Produtos produto = new Produtos();
+		PainelCadastroProdutos cadastProd = new PainelCadastroProdutos();
+		PainelCadastroUsuarios cadastUser = new PainelCadastroUsuarios();
+		LerProdutos lista = new LerProdutos();
 		
-		/*
-		 * teste de leitura
-		 * */
-		//LerFuncionario ler = new LerFuncionario();
-		
-		//System.out.print(ler.getNome());
-		//System.out.print(ler.getSenha());
-		
-		/*if(log.login() == true) {
+		if(log.login() == true) {
 				
 			menu.menuPainel();
 			
-		}*/if(menu.getInfMenu() == 1) {
+		}if(menu.getInfMenu() == 1) {
 			
-			cadastro.cadastrarUsuario();
+			cadastUser.cadastrarUsuario();
 			
 			log.setExe(true);
 			log.setLogin(false);
@@ -36,7 +34,15 @@ public class Principal {
 		
 		}else if (menu.getInfMenu() == 2) {
 				
-			}else if (menu.getInfMenu() == 3) {
+			cadastProd.cadastrarProduto();
+			
+			if(cadastProd.isExe() == false) {
+				menu.menuPainel();
+			}
+		}else if (menu.getInfMenu() == 3) {
+			
+			lista.getListProdutos();
+				
 				
 			}else {
 			

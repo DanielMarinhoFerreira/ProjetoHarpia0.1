@@ -8,14 +8,15 @@ public class Menu {
 	int infMenu;
 	
 	/*
-	 * PAINEL DEPOIS QUE REALIZAR O MENU
+	 * PAINEL MENU APOIS QUE REALIZAR O LOGIN
 	 * 
 	 * */
 	public void menuPainel() {
 		
 		 System.out.println("-===================== "+nomeMenu[2]+" ==========================-"+"\n");
 		 System.out.println("-= "+nomeMenu[5]+" [1]: ============================-");
-		 System.out.println("-= "+nomeMenu[6]+" 	     [2]: ============================-");
+		 System.out.println("-= "+nomeMenu[3]+"  [2]: ============================-");
+		 System.out.println("-= "+nomeMenu[6]+" 	     [3]: ============================-");
 		 System.out.println("-= "+nomeMenu[4]+" 	     [5]: ============================-"+"\n");
 		 System.out.println("-=====================================================-");
 		 System.out.print("Informe qual rotina gostaria de acessar: ");

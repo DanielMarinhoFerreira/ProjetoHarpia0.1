@@ -5,10 +5,7 @@ import lerDados.LerFuncionario;
 
 public class PainelLogin {
 	
-	boolean exe = true;
-	
-	
-
+	boolean exe = true; // VARIAVEL PARA CONDIÇÃO DE LOOP DO LOGIN
 	Menu menu = new Menu();
 	Scanner scan = new Scanner(System.in);
 
@@ -31,8 +28,8 @@ public class PainelLogin {
 	
 	public boolean login() {
 		
-		lerDados.lerDadosFuncionario();
-			
+		lerDados.lerDadosFuncionario(); // REALIZAR A LEITURA DOS DADOS ENTRO DE UM ARQUIVO
+		
 		while (exe) {
 		
 			System.out.println("-===================== "+menu.nomeMenu[0]+ " =========================-"); 	
@@ -45,18 +42,22 @@ public class PainelLogin {
 			
 			lerDados.validaLogin(lerNome, lerSenha);
 			
+			/*
+			 * VERIFICAR OS USUÁRIO DENTRO QUE UM ARQUIVO, RETORNA SE LOGIN É VERDADEIRO. 
+			 * */
 			
-			//System.out.print(lerDados.getListNome());
-			//lerDados.lerDadosFuncionario();
-			
-			/*if(getLerNome().equals(lerDados.getNome()) && getLerSenha().equals(lerDados.getSenha())) {
-				login = true;
-				exe = false;
-			}*/
-		}		
-		return login;	
-	}
+			if(getLerNome().equals(lerDados.getNome()) && getLerSenha().equals(lerDados.getSenha())) {
 		
+				exe = false;
+				login = true;
+				
+				}	
+			}
+			
+		return login;
+		
+	}			
+	
 	public String getLerSenha() {
 		return lerSenha;
 	}
@@ -84,31 +85,5 @@ public class PainelLogin {
 	boolean login = false;
 	
 //===========================================================================================================
-	
-/*
- * 
- * 
- * */	
-	/*public boolean loginTes() {
-		
-		boolean login = false;
-		
-		while (exe) {
-		
-			login();
-			lerDados.lerDadosFuncionario();
-			
-			System.out.print(lerDados.getNome());
-			System.out.print(lerDados.getSenha());
-			
-			if(getLerNome().equals(lerDados.getNome()) && getLerSenha().equals(lerDados.getSenha())) {
-				exe = false;
-				login = true;
-				
-			}
-		}
-		
-		return login;
-	}*/
 	
 }
