@@ -22,7 +22,7 @@ public class LerFuncionario {
 		
 		try {
 			
-			FileReader arquivo = new FileReader("src\\Dados\\Produtos.txt");
+			FileReader arquivo = new FileReader("src\\Dados\\Funcionario.txt");
 			scan = new Scanner(arquivo);
 			
 			while (scan.hasNextLine()) {

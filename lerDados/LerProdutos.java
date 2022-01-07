@@ -27,6 +27,11 @@ public class LerProdutos {
 				listProduto.add(id = scan.nextLine());
 				listProduto.add(desc = scan.nextLine());
 				listProduto.add(valor = scan.nextLine());
+			/*	
+				System.out.print(id);
+				System.out.print(desc);
+				System.out.print(valor);
+			*/
 			}
 			
 		}catch (IOException e) {

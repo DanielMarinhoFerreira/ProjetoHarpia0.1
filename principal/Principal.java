@@ -41,7 +41,8 @@ public class Principal {
 			}
 		}else if (menu.getInfMenu() == 3) {
 			
-			lista.getListProdutos();
+			lista.lerDadosFuncionario();
+			System.out.print(lista.getListProdutos());
 				
 				
 			}else {
