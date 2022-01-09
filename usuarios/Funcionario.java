@@ -1,5 +1,9 @@
 package usuarios;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 public class Funcionario extends Admin {
 
 	private String nome;

@@ -1,5 +1,9 @@
 package gravarDados;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;

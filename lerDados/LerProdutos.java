@@ -1,5 +1,9 @@
 package lerDados;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,7 +61,7 @@ public class LerProdutos {
 			
 			System.out.print("Não foi encontrado o ultimo (id) do produto." + erro.getMessage());				
 		}
-		return id;	
+		return id;	// RETORNA O ULTIMO ID DA LISTA.
 	}	
 	
 	public ArrayList<String> getListProdutos() {

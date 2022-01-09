@@ -1,5 +1,9 @@
 package lerDados;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,11 +49,11 @@ public class LerFuncionario {
 		for(String i : listNome) {
 				
 			if(i.equals(nome)) { //&& i.equals(log.getLerNome())) {
-				//System.out.print(i);
+
 				nomeList = i;
 				
 			}else if(i.equals(senha)) { //&& i.equals(log.getLerSenha())){
-				//System.out.print(i);
+
 				senhaList = i;
 			}	
 		}	

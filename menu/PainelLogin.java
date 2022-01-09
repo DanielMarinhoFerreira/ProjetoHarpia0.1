@@ -1,5 +1,9 @@
 package menu;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 import java.util.Scanner;
 import lerDados.LerFuncionario;
 

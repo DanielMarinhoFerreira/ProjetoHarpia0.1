@@ -36,7 +36,6 @@ public class Principal {
 				
 			cadastProd.cadastrarProduto();
 			
-			//System.out.print(lista.lerId());
 			
 			if(cadastProd.isExe() == false) {
 				menu.menuPainel();
@@ -46,6 +45,7 @@ public class Principal {
 			lista.lerDadosProdutos();
 			System.out.print(lista.getListProdutos());
 			//lista.lerDadosProdutos();
+			//System.out.print(lista.lerId());
 			
 				
 			}else {

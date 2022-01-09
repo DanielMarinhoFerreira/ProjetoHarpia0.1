@@ -1,5 +1,9 @@
 package menu;
-
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
 import gravarDados.GravarProdutos;
 import lerDados.LerProdutos;
 import produtos.Produtos;
@@ -12,13 +16,15 @@ public class PainelCadastroProdutos {
 	LerProdutos lista = new LerProdutos();
 	
 	
-	int id = lista.lerId() +1;
+	int id = lista.lerId() +1; // RECEBE O ULTIMO ID E SOMA COM +1
 	Menu menu = new Menu();
 	
-	public int proximoId() {
+	public int proximoId() { // METODO QUE FAZ A SOMA DO ID APOS UM CADASTRO 
 		
 		return id++;
 	}
+	
+	//============================================ CADASTRO DE PRODUTO ========================================================	
 	
 	public void cadastrarProduto(){
 		
@@ -55,6 +61,9 @@ public class PainelCadastroProdutos {
 	    
 		}
 	}
+	
+	//===========================================================================================================
+	
 	public boolean isExe() {
 		return exe;
 	}

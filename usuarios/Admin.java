@@ -1,4 +1,10 @@
 package usuarios;
+/*
+ * @Version 09.01.2022
+ * @Aouthor Daniel Marinho
+ * 
+ * */
+
 // CLASSE DE USUARIO ADMINISTRADOR DO SISTEMA, SOMENTE RETORNA O NOME E SENHA   
 public class Admin {
 	
