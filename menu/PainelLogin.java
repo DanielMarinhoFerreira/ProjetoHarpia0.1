@@ -28,7 +28,7 @@ public class PainelLogin {
 	
 	public boolean login() {
 		
-		lerDados.lerDadosFuncionario(); // REALIZAR A LEITURA DOS DADOS ENTRO DE UM ARQUIVO
+		lerDados.lerDadosFuncionario(); // REALIZAR A LEITURA DOS DADOS
 		
 		while (exe) {
 		
@@ -44,6 +44,7 @@ public class PainelLogin {
 			
 			/*
 			 * VERIFICAR OS USUÁRIO DENTRO QUE UM ARQUIVO, RETORNA SE LOGIN É VERDADEIRO. 
+			 * CONDIÇÃO DE PARA DA DO LOOP
 			 * */
 			
 			if(getLerNome().equals(lerDados.getNome()) && getLerSenha().equals(lerDados.getSenha())) {

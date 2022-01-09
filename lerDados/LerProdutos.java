@@ -9,7 +9,7 @@ public class LerProdutos {
 	
 	private ArrayList<String> listProduto = new ArrayList<String>(); 
 
-	public void lerDadosFuncionario() {
+	public void lerDadosProdutos() {
 		
 		 String id = null;
 		 String desc = null;
@@ -38,6 +38,29 @@ public class LerProdutos {
 				
 				System.out.print("Erro verificação Funcionario "+"\n" + e.getMessage());
 			}
+		}
+	
+	public void lerId() {
+		
+		int id, i, j;
+		boolean exe = true;
+		for (i=0; i<listProduto.size(); i++) {
+			
+			
+			if(i == 0) {
+				
+				id = Integer.parseInt(listProduto.get(i));
+				
+				i = 3;
+				
+				for (j = 3; j <listProduto.size(); j = 3) {	
+				
+					 id = Integer.parseInt(listProduto.get(i));
+				}
+					 System.out.println("id " +id );						 
+				 }
+				
+			}	
 		}
 	
 	public ArrayList<String> getListProdutos() {
