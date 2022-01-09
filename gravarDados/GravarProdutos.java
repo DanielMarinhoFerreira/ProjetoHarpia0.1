@@ -12,7 +12,7 @@ public class GravarProdutos {
 			
 			try {
 				 
-				FileWriter arquivo = new FileWriter("src\\dados\\Produtos.txt", true); // PRODURA O CAMINHO DO ARQUIVO E SE NÃO TIVER GERA O ARQUIVO
+				FileWriter arquivo = new FileWriter("src\\dados\\Produtos.txt", true); // PRODURA O CAMINHO DO ARQUIVO E SE Nï¿½O TIVER GERA O ARQUIVO
 			
 				 gravarArq = new PrintWriter(arquivo); // GRAVAR OS DADOS NO ARQUIVO
 				
@@ -23,7 +23,7 @@ public class GravarProdutos {
 				System.out.printf("\nDados gravados com sucesso..\n");
 			
 			}catch (IOException erro) {
-				System.out.print("erro! arquivo não encontrado"+ erro.getMessage());
+				System.out.print("erro! arquivo nï¿½o encontrado"+ erro.getMessage());
 			
 			}finally {
 				

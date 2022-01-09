@@ -11,8 +11,8 @@ public class LerFuncionario {
 
 	String nomeList = null;
 	String senhaList = null;
-	private ArrayList<String> listNome = new ArrayList<String>(); 
-
+	private ArrayList<String> listNome = new ArrayList<>();
+	
 	public void lerDadosFuncionario() {
 		
 		 String nome = null;
@@ -33,22 +33,25 @@ public class LerFuncionario {
 			
 		}catch (IOException e) {
 				
-				System.out.print("Erro verificação Funcionario "+"\n" + e.getMessage());
+				System.out.print("Erro verificaï¿½ï¿½o Funcionario "+"\n" + e.getMessage());
 			}
 		}
 		
+	
 	public void validaLogin(String nome, String senha) {
 		
 		PainelLogin log = new PainelLogin();  
 		
 		for(String i : listNome) {
 				
-			if(i.equals(nome)) {
+			if(i.equals(nome)) { //&& i.equals(log.getLerNome())) {
+				
+				System.out.print(i);
 				
 				nomeList = i;
 				
-			}if(i.equals(senha)){
-				
+			}else if(i.equals(senha)) { //&& i.equals(log.getLerSenha())){
+				System.out.print(i);
 				senhaList = i;
 			}	
 		}	
