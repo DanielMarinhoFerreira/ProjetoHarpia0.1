@@ -3,17 +3,18 @@ package lerDados;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class LerProdutos {
 	
-	private ArrayList<String> listProduto = new ArrayList<String>(); 
+	private ArrayList<String> listProduto = new ArrayList<>(); 
 
 	public void lerDadosProdutos() {
 		
-		 String id = null;
 		 String desc = null;
 		 String valor = null;
+		 String id = null;
 		
 		Scanner scan;
 		
@@ -24,14 +25,9 @@ public class LerProdutos {
 			
 			while (scan.hasNextLine()) {
 				
-				listProduto.add(id = scan.nextLine());
 				listProduto.add(desc = scan.nextLine());
 				listProduto.add(valor = scan.nextLine());
-			/*	
-				System.out.print(id);
-				System.out.print(desc);
-				System.out.print(valor);
-			*/
+				listProduto.add(id = scan.nextLine());
 			}
 			
 		}catch (IOException e) {
@@ -40,28 +36,29 @@ public class LerProdutos {
 			}
 		}
 	
-	public void lerId() {
+	public int  lerId() {
 		
-		int id, i, j;
-		boolean exe = true;
-		for (i=0; i<listProduto.size(); i++) {
+		lerDadosProdutos(); // EXECUTA A LISTA DE PRODUTOS
+		int id = 0;
+		
+		try {
 			
+			String listId;
 			
-			if(i == 0) {
-				
-				id = Integer.parseInt(listProduto.get(i));
-				
-				i = 3;
-				
-				for (j = 3; j <listProduto.size(); j = 3) {	
-				
-					 id = Integer.parseInt(listProduto.get(i));
-				}
-					 System.out.println("id " +id );						 
-				 }
-				
-			}	
+			if (listProduto != null && !listProduto.isEmpty()) {
+			
+			listId = listProduto.get(listProduto.size() -1);
+			
+			id = Integer.parseInt(listId);
+			
+			}
+			
+		}catch(NoSuchElementException erro){
+			
+			System.out.print("Não foi encontrado o ultimo (id) do produto." + erro.getMessage());				
 		}
+		return id;	
+	}	
 	
 	public ArrayList<String> getListProdutos() {
 		return listProduto;

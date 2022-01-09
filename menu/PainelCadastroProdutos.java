@@ -1,22 +1,28 @@
 package menu;
 
 import gravarDados.GravarProdutos;
+import lerDados.LerProdutos;
 import produtos.Produtos;
 
 public class PainelCadastroProdutos {
 	
 	boolean exe = true;
-
-	int id = 01;
-	Menu menu = new Menu();
-	Produtos produto = new Produtos(); 
 	GravarProdutos cadastrar = new GravarProdutos();
+	Produtos produto = new Produtos(); 
+	LerProdutos lista = new LerProdutos();
+	
+	
+	int id = lista.lerId() +1;
+	Menu menu = new Menu();
 	
 	public int proximoId() {
+		
 		return id++;
 	}
 	
 	public void cadastrarProduto(){
+		
+		System.out.print(lista.getListProdutos());
 		
 		while (exe) {
 		

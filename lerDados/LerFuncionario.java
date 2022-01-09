@@ -45,13 +45,11 @@ public class LerFuncionario {
 		for(String i : listNome) {
 				
 			if(i.equals(nome)) { //&& i.equals(log.getLerNome())) {
-				
-				System.out.print(i);
-				
+				//System.out.print(i);
 				nomeList = i;
 				
 			}else if(i.equals(senha)) { //&& i.equals(log.getLerSenha())){
-				System.out.print(i);
+				//System.out.print(i);
 				senhaList = i;
 			}	
 		}	

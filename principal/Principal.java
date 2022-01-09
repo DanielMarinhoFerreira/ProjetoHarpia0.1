@@ -36,15 +36,17 @@ public class Principal {
 				
 			cadastProd.cadastrarProduto();
 			
+			//System.out.print(lista.lerId());
+			
 			if(cadastProd.isExe() == false) {
 				menu.menuPainel();
 			}
 		}else if (menu.getInfMenu() == 3) {
 			
 			lista.lerDadosProdutos();
-			
 			System.out.print(lista.getListProdutos());
-			lista.lerId();	
+			//lista.lerDadosProdutos();
+			
 				
 			}else {
 			
