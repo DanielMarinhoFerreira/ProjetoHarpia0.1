@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class Menu {
 	
-	String []nomeMenu = {"Login", "Cadastro","Menu","Cadastrar Pedido","Sair", "Cadastrar Usuario","Produto"};
+	String []nomeMenu = {"Login", "Cadastro","Menu","Cadastrar Pedido","Sair",
+			"Cadastrar Usuario","Produto cadastrado","Produto"};
 	int infMenu;
 	
 	/*
@@ -20,7 +21,7 @@ public class Menu {
 		 System.out.println("-===================== "+nomeMenu[2]+" ==========================-"+"\n");
 		 System.out.println("-= "+nomeMenu[5]+" [1]: ============================-");
 		 System.out.println("-= "+nomeMenu[3]+"  [2]: ============================-");
-		 System.out.println("-= "+nomeMenu[6]+" 	     [3]: ============================-");
+		 System.out.println("-= "+nomeMenu[6]+"[3]: ============================-");
 		 System.out.println("-= "+nomeMenu[4]+" 	     [5]: ============================-"+"\n");
 		 System.out.println("-=====================================================-");
 		 System.out.print("Informe qual rotina gostaria de acessar: ");

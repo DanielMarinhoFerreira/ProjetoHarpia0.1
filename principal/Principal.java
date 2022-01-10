@@ -5,6 +5,7 @@ import menu.Menu;
 import menu.PainelCadastroProdutos;
 import menu.PainelCadastroUsuarios;
 import menu.PainelLogin;
+import menu.PainelProdutos;
 import produtos.Produtos;
 
 public class Principal {
@@ -17,7 +18,7 @@ public class Principal {
 		PainelCadastroProdutos cadastProd = new PainelCadastroProdutos();
 		PainelCadastroUsuarios cadastUser = new PainelCadastroUsuarios();
 		LerProdutos lista = new LerProdutos();
-		
+		PainelProdutos dadosProd = new PainelProdutos();
 		if(log.login() == true) {
 				
 			menu.menuPainel();
@@ -42,11 +43,7 @@ public class Principal {
 			}
 		}else if (menu.getInfMenu() == 3) {
 			
-			lista.lerDadosProdutos();
-			System.out.print(lista.getListProdutos());
-			//lista.lerDadosProdutos();
-			//System.out.print(lista.lerId());
-			
+			dadosProd.verProdutos();
 				
 			}else {
 			

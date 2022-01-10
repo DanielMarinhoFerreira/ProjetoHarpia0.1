@@ -13,13 +13,12 @@ import java.util.Scanner;
 public class LerProdutos {
 	
 	private ArrayList<String> listProduto = new ArrayList<>(); 
-
+	
+	String desc = null;
+	String valor = null;
+	String id = null;
+	
 	public void lerDadosProdutos() {
-		
-		 String desc = null;
-		 String valor = null;
-		 String id = null;
-		
 		Scanner scan;
 		
 		try {
@@ -40,7 +39,7 @@ public class LerProdutos {
 			}
 		}
 	
-	public int  lerId() {
+	public int  lerId() {// RETORNA O ULTIMO ITEM DA LISTA E TRANSFORMA EM UM INT
 		
 		lerDadosProdutos(); // EXECUTA A LISTA DE PRODUTOS
 		int id = 0;
@@ -49,11 +48,11 @@ public class LerProdutos {
 			
 			String listId;
 			
-			if (listProduto != null && !listProduto.isEmpty()) {
+			if (listProduto != null && !listProduto.isEmpty()) { // VERIFICAS SE ALISTA NÃO ESTAR NULA OU VAZIA 
 			
-			listId = listProduto.get(listProduto.size() -1);
+			listId = listProduto.get(listProduto.size() -1); // PEGA O ULTIMO ITEM DA LISTA 
 			
-			id = Integer.parseInt(listId);
+			id = Integer.parseInt(listId); // CONVERTE EM UM INTEIRO 
 			
 			}
 			
@@ -70,6 +69,37 @@ public class LerProdutos {
 	
 	public void setListProdutos(ArrayList<String> listProduto) {
 		this.listProduto = listProduto;
+	}
+	public ArrayList<String> getListProduto() {
+		return listProduto;
+	}
+	
+	public void setListProduto(ArrayList<String> listProduto) {
+		this.listProduto = listProduto;
+	}
+	
+	public String getDesc() {
+		return desc;
+	}
+	
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	
+	public String getValor() {
+		return valor;
+	}
+	
+	public void setValor(String valor) {
+		this.valor = valor;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }
