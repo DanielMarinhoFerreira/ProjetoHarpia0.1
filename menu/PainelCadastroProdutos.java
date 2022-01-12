@@ -16,7 +16,7 @@ public class PainelCadastroProdutos {
 	LerProdutos lista = new LerProdutos();
 	
 	
-	int id = lista.lerId() +1; // RECEBE O ULTIMO ID E SOMA COM +1
+	int id; // RECEBE O ULTIMO ID E SOMA COM +1
 	Menu menu = new Menu();
 	
 	public int proximoId() { // METODO QUE FAZ A SOMA DO ID APOS UM CADASTRO 
@@ -28,7 +28,8 @@ public class PainelCadastroProdutos {
 	
 	public void cadastrarProduto(){
 		
-		System.out.print(lista.getListProdutos());
+		//System.out.print(lista.getListProdutos());
+		
 		
 		while (exe) {
 		

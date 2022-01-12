@@ -1,18 +1,8 @@
-bolo
-10.0
-1
-laranja
-3.87
-2
-banana
-2.78
-3
-fubar
-8.99
-4
-teste
-123.0
-5
-teste2
-10.0
-6
+bolo ; 12.0 ; 0
+banana ; 13.0 ; 1
+abacaxi ; 3.0 ; 2
+brigadeiro ; 15.0 ; 3
+pão ; 6.0 ; 4
+teste ; 1.0 ; 0
+teste2 ; 2.0 ; 1
+teste3 ; 3.0 ; 2

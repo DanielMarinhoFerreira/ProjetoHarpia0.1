@@ -20,9 +20,7 @@ public class GravarProdutos {
 			
 				 gravarArq = new PrintWriter(arquivo); // GRAVAR OS DADOS NO ARQUIVO
 				
-				gravarArq.println(desc);
-				gravarArq.println(valor);
-				gravarArq.println(id);
+				gravarArq.format("\n%s ; %s ; %s",desc,valor,id);
 				
 				System.out.printf("\nDados gravados com sucesso..\n");
 			

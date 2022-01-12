@@ -14,6 +14,8 @@ public class LerProdutos {
 	
 	private ArrayList<String> listProduto = new ArrayList<>(); 
 	
+	ArrayList<String> produto = new ArrayList<>();
+	
 	String desc = null;
 	String valor = null;
 	String id = null;
@@ -28,10 +30,15 @@ public class LerProdutos {
 			
 			while (scan.hasNextLine()) {
 				
-				listProduto.add(desc = scan.nextLine());
-				listProduto.add(valor = scan.nextLine());
-				listProduto.add(id = scan.nextLine());
+				listProduto.add(id = scan.nextLine());	
 			}
+			
+			
+			/*for (int i=0; i<listProduto.hashCode(); i++) {
+				
+				System.out.println(listProduto.get(i));
+					
+			}*/
 			
 		}catch (IOException e) {
 				
@@ -39,10 +46,11 @@ public class LerProdutos {
 			}
 		}
 	
-	public int  lerId() {// RETORNA O ULTIMO ITEM DA LISTA E TRANSFORMA EM UM INT
+	/*public int  lerId() {// RETORNA O ULTIMO ITEM DA LISTA E TRANSFORMA EM UM INT
 		
 		lerDadosProdutos(); // EXECUTA A LISTA DE PRODUTOS
 		int id = 0;
+		
 		
 		try {
 			
@@ -50,18 +58,21 @@ public class LerProdutos {
 			
 			if (listProduto != null && !listProduto.isEmpty()) { // VERIFICAS SE ALISTA NÃO ESTAR NULA OU VAZIA 
 			
-			listId = listProduto.get(listProduto.size() -1); // PEGA O ULTIMO ITEM DA LISTA 
+					
+					
+				}
+				
+				
+			//listId = listProduto.get(listProduto.size() -1); // PEGA O ULTIMO ITEM DA LISTA 
+			//id = Integer.parseInt(listId); // CONVERTE EM UM INTEIRO 
 			
-			id = Integer.parseInt(listId); // CONVERTE EM UM INTEIRO 
-			
-			}
 			
 		}catch(NoSuchElementException erro){
 			
 			System.out.print("Não foi encontrado o ultimo (id) do produto." + erro.getMessage());				
 		}
 		return id;	// RETORNA O ULTIMO ID DA LISTA.
-	}	
+	}*/	
 	
 	public ArrayList<String> getListProdutos() {
 		return listProduto;
